@@ -1,0 +1,24 @@
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    width: 450px;
+    height: 300px;
+    background-color:rgb(185, 250, 229);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn {
+    padding: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+}
