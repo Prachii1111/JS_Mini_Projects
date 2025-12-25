@@ -1,0 +1,19 @@
+img {
+    width: 40px;
+    height: 40px;
+}
+
+.star::before {
+  color: lightgray;  /* before color */
+}
+
+.star::after {
+  content: "\f005";  /* Font Awesome star unicode */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: gold;       /* after color */
+  position: absolute;
+  left: 0;
+  width: 50%;        /* adjust for half star */
+  overflow: hidden;
+}
