@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: rgb(224, 238, 243);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 360px;
+    height: 100vh;
+    padding: 20px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: translateX(-100%);
+    transition: .3s ease-in-out all;
+    z-index: 1000;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: rgb(99, 10, 10);
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-shadow: -1px 4px 3px rgba(182, 212, 234, 0.95);
+}
+
+span {
+    color:#379de6;
+}
+
+.nav-links {
+    border: 1px solid white;
+    padding-top: 35px;
+}
+
+.nav-links li {
+    list-style-type: none;
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding-top: 20px;
+    color: lightslategray;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li:hover {
+    color: rgb(70, 80, 90);
+    padding-left: 5px; 
+}
+
+.show-sidebar {
+    transform: translateX(0);
+}
+
+.open-btn {
+    position: fixed;
+    top: 2rem;
+    left: 3rem;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    color:#1478c0;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.modal {
+    padding: 6px 12px;
+    border-radius: 5px;
+    border: none;
+    background-color:#46a8ed;
+    color: white;
+    box-shadow: 2px 2px 5px rgba(191, 203, 212, 0.95);
+    cursor: pointer;
+}
+
+@keyframes bounce {
+    0% { 
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.fa-solid {
+    padding-right: 15px;
+}
+
+.socials {
+    margin-top: auto;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+.social-links li {
+    list-style-type: none;
+    padding: 10px;
+    color: #46a8ed;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.social-links li:hover {
+    color:#1478c0;
+}
