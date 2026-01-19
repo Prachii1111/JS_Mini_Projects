@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    /* border: 2px solid seagreen; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.photo-card {
+    width: 350px;
+    height: 300px;
+    margin: 10px;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.loading {
+    text-align: center;
+    display: none;
+    font-size: 2rem;
+}
+
