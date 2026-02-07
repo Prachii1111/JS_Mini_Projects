@@ -1,27 +1,13 @@
 const giveawayEnd = new Date(2026, 4, 15, 11, 30, 0);   // 15 May 2026 11:30:00 AM
 
-const now = new Date();
+console.log(days, hours, minutes, seconds);
+    const daysEl = document.querySelector(".days span");
+    const hoursEl = document.querySelector(".hours span");
+    const minsEl = document.querySelector(".minutes span");
+    const secEl = document.querySelector(".seconds span");
 
-now.getFullYear(); 
-now.getMonth();
-now.getDate();
 
-const diff = giveawayEnd - now;
-console.log(diff);
-
-const totalSeconds = Math.floor(diff / 1000);
-
-const days = Math.floor(totalSeconds / (24 * 60 * 60));
-
-const hours = Math.floor(
-    (totalSeconds % (24 * 60 * 60)) / (60 * 60)   // hours are the leftover hours after days are removed
-);
-
-const minutes = Math.floor(
-    (totalSeconds % (60 * 60)) / 60
-);
-
-const seconds = Math.floor(totalSeconds % 60);
+// hours are the leftover hours after days are removed
 
 const timer = setInterval(() => {
     const now = new Date();
@@ -40,16 +26,6 @@ const timer = setInterval(() => {
     const minutes = Math.floor ((totalSeconds % 3600) / 60);
     const seconds = Math.floor (totalSeconds % 60);
     
-    console.log(days, hours, minutes, seconds);
-    const daysEl = document.querySelector(".days span");
-    const hoursEl = document.querySelector(".hours span");
-    const minsEl = document.querySelector(".minutes span");
-    const secEl = document.querySelector(".seconds span");
-
-    console.log(daysEl);
-    console.log(hoursEl);
-    console.log(minsEl);
-    console.log(secEl);
     daysEl.textContent = days;
     hoursEl.textContent = hours;
     minsEl.textContent = minutes;
