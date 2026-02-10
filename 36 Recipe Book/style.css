@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #0C2461;
+
+}
+header h1 {
+    color: white;
+    font-size: 2.4rem;
+    padding: 15px;
+    text-align: center;
+}
