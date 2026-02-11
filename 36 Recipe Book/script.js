@@ -1,35 +1,42 @@
 
-// key - e6d17e75e43143faae754c60737c8f7b
-// https://api.spoonacular.com/recipes/random?number=10&apiKey=${API_KEY}
-console.log("js loaded");
-
 const recipeContainer = document.querySelector(".recipes-container");
 
 const API_KEY = 'e6d17e75e43143faae754c60737c8f7b';
 
-async function fetchReceipe() {
-    // try {
+async function fetchRecipe() {
+    try {
         const response = await fetch(`https://api.spoonacular.com/recipes/random?number=10&apiKey=${API_KEY}`);
+
+        if( !response.ok) {
+            throw new Error('API request failed: ', + response.status);
+        }
+
         const data = await response.json();
-        console.log(data);
 
-    // } catch {
-        // const error = new Error("Error fetching data");
-        // console.log("Error");
-    // }
+        const recipes = data.results;
 
-    let recipes = data.recipes;
-    // return data.recipes;
+        console.log(recipes);
+        console.log("Length:", recipes.length);
 
-    for(let i=0; i<=10; i++) {
-        const figure = document.createElement("figure");
-        const img = document.createElement("img");
-        console.log(data.recipes[i].image);
-        img.src = data.recipes[i].image;
+        for(let i=0; i < recipes.length; i++) {
+            const figure = document.createElement("figure");
+            const img = document.createElement("img");
+            const title = document.createElement("figcaption");
 
-        figure.appendChild(img);
+            img.src = recipes[i].image;
+            title.textContent = recipes[i].title;
+
+
+            figure.appendChild(img);
+            figure.appendChild(title);
+            recipeContainer.appendChild(figure);
+        }  
+
+    } catch {
+        const error = new Error("Error fetching data");
+        console.log("Error");
     }
 } 
 
-fetchReceipe();
+fetchRecipe();
 
