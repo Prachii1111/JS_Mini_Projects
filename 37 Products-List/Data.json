@@ -1,0 +1,71 @@
+[
+    {
+        "id": 1,
+        "name": "Bowl of vegetable salads",
+        "price": 450,
+        "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+
+    {
+        "id": 2,
+        "name": "Dimsum",
+        "price": 350,
+        "image": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+
+    {
+        "id": 3,
+        "name": "Pancake",
+        "price": 350,
+        "image": "https://images.unsplash.com/photo-1650134973809-d8c3a2da59ba?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+
+    {
+        "id": 4,
+        "name": "Cupcake",
+        "price": 50,
+        "image": "https://images.unsplash.com/photo-1550617931-e17a7b70dce2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njd8fGNha2V8ZW58MHwwfDB8fHwy"
+    },
+
+    {
+        "id": 5,
+        "name": "Pasta",
+        "price": 150,
+        "image": "https://images.unsplash.com/photo-1623243020684-9f8bcefe6e94?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHBhc3RhfGVufDB8MHwwfHx8Mg%3D%3D"
+    },
+
+    {
+        "id": 6,
+        "name": "Iced latte",
+        "price": 120,
+        "image": "https://images.unsplash.com/photo-1523942839745-7848c839b661?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzJ8fGNvZmZlZXxlbnwwfDB8MHx8fDI%3D"
+    },
+
+    {
+        "id": 7,
+        "name": "Dumplings",
+        "price": 180,
+        "image": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZHVtcGxpbmdzfGVufDB8MHwwfHx8Mg%3D%3D"
+    },
+    
+    {
+        "id": 8,
+        "name": "Burger",
+        "price": 250,
+        "image": "https://images.unsplash.com/photo-1600891964751-dc0cc8611e47?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTJ8fGJ1cmdlcnxlbnwwfDB8MHx8fDI%3D"
+    },
+
+    {
+        "id": 9,
+        "name": "Matcha",
+        "price": 250,
+        "image": "https://images.unsplash.com/photo-1515823064-d6e0c04616a7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWF0Y2hhfGVufDB8MHwwfHx8Mg%3D%3D"
+    }, 
+
+    {
+        "id": 10,
+        "name": "Match Cake",
+        "price": 300,
+        "image": "https://images.unsplash.com/photo-1627308592814-f88b68f7b4a1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWF0Y2hhJTIwY2FrZXxlbnwwfDB8MHx8fDI%3D"
+    }
+]
