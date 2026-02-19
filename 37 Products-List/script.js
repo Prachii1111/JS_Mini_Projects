@@ -25,7 +25,8 @@ async function fetchProducts() {
                 <div class="product-content">
                     <h2>${product.name}</h2>
                     <p>₹${product.price}</p>
-                    <button class="addToCart" data-id="${product.id}">Add to Cart</button>
+                    <button class="addToCart" data-id="${product.id}">
+                    Add to Cart</button>
                 </div>
             `
 
@@ -46,7 +47,7 @@ cartModal.classList.add("cart-modal");
 
 
 productList.addEventListener("click", (e) => {
-    console.log(e.target);
+    console.log("Product List:", e.target);
 
     if(e.target.classList.contains("addToCart")) {
         
@@ -72,7 +73,28 @@ productList.addEventListener("click", (e) => {
         }
         console.log(cart);
 
-        const CartTotal = updateTotal();
+        renderCart();
+    }
+});
+
+
+// ----------- DELETE ITEM 
+cartModal.addEventListener("click", (e) => {
+    console.log("Target:", e.target);
+
+    if(e.target.classList.contains("delete-btn")) {
+        let id = Number(e.target.dataset.id);
+
+        cart = cart.filter(item => item.id !== id);
+
+        renderCart();
+    }
+});
+
+
+// ---------- RENDER CART UI
+function renderCart() {
+    const CartTotal = updateTotal();
         console.log("CartTotal:", CartTotal);
 
         // rendering selected items 
@@ -83,10 +105,17 @@ productList.addEventListener("click", (e) => {
         cart.forEach(item => {
             cartModal.innerHTML += `
                 <div class="cart-items">
-                    <h2>${item.name}</h2>
-                    <div class="cart-nos">
-                        <strong>${item.quantity}x</strong>
-                        <span>₹${item.price}</span>
+                    <div class="left">
+                        <h2>${item.name}</h2>
+                        <div class="cart-nos">
+                            <strong>${item.quantity}x</strong>
+                            <span>₹${item.price}</span>
+                        </div>
+                    </div>
+
+                    <div class="right">
+                        <img class="delete-btn" src="./Images/remove.png" 
+                        data-id="${item.id}">
                     </div>
                 </div>
         `
@@ -99,8 +128,7 @@ productList.addEventListener("click", (e) => {
             </div>
         `
         productContainer.appendChild(cartModal);
-    }
-})
+}
 
 function updateTotal() {
     const total = cart.reduce((sum, item) => {
@@ -108,6 +136,5 @@ function updateTotal() {
     }, 0);
 
     return total;
-    // console.log("Total:", total);
 }
 
